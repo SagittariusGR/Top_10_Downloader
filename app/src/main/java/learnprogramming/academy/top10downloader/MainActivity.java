@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 InputStream inputStream = connection.getInputStream();
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 BufferedReader reader = new BufferedReader(inputStreamReader);
+            } catch (MalformedURLException e) {
+                Log.e(TAG, "downloadXML: Invalid URL " + e.getMessage());
+            } catch (IOException e) {
+                Log.e(TAG, "downloadXML: IO Exception reading data: " + e.getMessage());
             }
         }
     }
