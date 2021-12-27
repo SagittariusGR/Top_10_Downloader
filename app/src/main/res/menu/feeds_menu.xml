@@ -11,6 +11,18 @@
     <item
         android:id="@+id/mnuSongs"
         android:title="Songs" />
+    <item
+        android:id="@+id/mnuAlbums"
+        android:title="Albums" />
+    <item
+        android:id="@+id/mnuMovies"
+        android:title="Movies" />
+    <item
+        android:id="@+id/mnuTVSeasons"
+        android:title="TV Seasons" />
+    <item
+        android:id="@+id/mnuTVEpisodes"
+        android:title="TV Episodes" />
     <group
         android:id="@+id/mnugrpLimit"
         android:checkableBehavior="single">
@@ -21,5 +33,11 @@
         <item
             android:id="@+id/mnu25"
             android:title="Top 25" />
+        <item
+            android:id="@+id/mnu50"
+            android:title="Top 50" />
     </group>
+    <item
+        android:id="@+id/mnuRefresh"
+        android:title="Refresh" />
 </menu>
